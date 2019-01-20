@@ -1,14 +1,15 @@
-Prerequisites:
+### Prerequisites:
 	PowerShell 5+
 	Registered account - https://appcenter.ms
 	Token - https://appcenter.ms/settings/apitokens , with full access
-	Registered application - https://github.com/PoshKazun/appcenter-sampleapp-android in App Center. The application is forked from https://github.com/Microsoft/appcenter-sampleapp-android
+	Registered application - https://github.com/PoshKazun/appcenter-sampleapp-android in App Center. 
+	The application is forked from https://github.com/Microsoft/appcenter-sampleapp-android
 
-Files:
+### Files:
 	init.ps1 - The script demonstrates how to start build all app branches
 	AppCenter.ps1 - Helper functions to call APIs App Center
 	
-Helper functions:
+### Helper functions:
 	Invoke-WebAppCenterAPI - Wrapper for the Invoke-RestMethod cmdlet
 	Get-AppCenterUser - Returns the user profile data
 	Get-AppCenterToken - Returns api tokens for the authenticated user 
@@ -23,19 +24,19 @@ Helper functions:
 	New-AppCenterAppBuild - Create a build
 	Get-AppCenterAppLastBuildStatus - Show last status builds
 
-Init parameters:
+### Init parameters:
 	[Token]   - API token with full access
 	[AppName] - Application name (Get-AppCenterApp)
 	[Limit    - max parallel tasks (default = 2)]
 	
-Examples:
+### Examples:
 	# Example 1
 	C:\Scripts\init.ps1 -token 0a36a3b9f2c0570adb76 -AppName Android
 	
 	# Example 2
 	C:\Scripts\init.ps1 -token 0a36a3b9f2c0570adb76 -AppName Android -Limit 1
 	
-Sample output:
+### Sample output:
 	PS > C:\Scripts\init.ps1 -token 0a36a3b9f2c0570adb76a -AppName Android
 	
 	[1] Application Name Android
