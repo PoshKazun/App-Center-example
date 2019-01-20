@@ -203,7 +203,7 @@ Function Get-AppCenterAppBuildLogFile {
 }
 
 
-# Validate if count inProgress processes not more than Limit
+# Validate if count inProgress&notStarted processes not more than Limit
 Function Check-Limit {
 	[CmdletBinding()]
 	param(
