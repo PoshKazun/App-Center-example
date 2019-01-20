@@ -10,18 +10,18 @@
 	AppCenter.ps1 - Helper functions to call APIs App Center
 	
 ### Helper functions:
-	Invoke-WebAppCenterAPI - Wrapper for the Invoke-RestMethod cmdlet
-	Get-AppCenterUser - Returns the user profile data
-	Get-AppCenterToken - Returns api tokens for the authenticated user 
-	New-AppCenterToken - Creates a new API token
-	Remove-AppCenterToken - Delete the api_token object with the specific id
-	Get-AppCenterApp - Returns a list of apps
-	Get-AppCenterAppBranch - Returns the list of Git branches for this application
-	Get-AppCenterAppBranchBuild - Returns the list of builds for the branch
-	Get-AppCenterAppBuildLog - Get the build log
-	Get-AppCenterAppBuildLogFile - Gets the download URI
-	Check-Limit - Validate if count inProgress&notStarted processes not more than Limit
-	New-AppCenterAppBuild - Create a build
+	Invoke-WebAppCenterAPI          - Wrapper for the Invoke-RestMethod cmdlet
+	Get-AppCenterUser               - Returns the user profile data
+	Get-AppCenterToken              - Returns api tokens for the authenticated user 
+	New-AppCenterToken              - Creates a new API token
+	Remove-AppCenterToken           - Delete the api_token object with the specific id
+	Get-AppCenterApp                - Returns a list of apps
+	Get-AppCenterAppBranch          - Returns the list of Git branches for this application
+	Get-AppCenterAppBranchBuild     - Returns the list of builds for the branch
+	Get-AppCenterAppBuildLog        - Get the build log
+	Get-AppCenterAppBuildLogFile    - Gets the download URI
+	Check-Limit                     - Validate if count inProgress&notStarted processes not more than Limit
+	New-AppCenterAppBuild           - Create a build
 	Get-AppCenterAppLastBuildStatus - Show last status builds
 
 ### Init parameters:
