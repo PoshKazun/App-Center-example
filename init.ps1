@@ -68,9 +68,8 @@ while($total.Count -lt $Branches.Count -and $err -lt ($Branches.Count * 60)) {
 Write-Host "[4] Wait until all tasks have finished" -ForegroundColor Yellow
 Write-Host "`t..." -ForegroundColor Green
 if ($total) {
-	# Wait until all tasks have finished ($total)
 	while(1) {
-		$IsTask =  $total | Get-AppCenterAppBuild -OwnerName $Owner.Name -AppName $AppName | Where-Object {$_.status -ne "completed"}
+		$IsTask = $total | Get-AppCenterAppBuild -OwnerName $Owner.Name -AppName $AppName | Where-Object {$_.status -ne "completed"}
 
 		if (-Not $IsTask) {
 			break
