@@ -139,6 +139,7 @@ Function Get-AppCenterAppBranchBuild {
 
 # Returns the build detail for the given build ID
 Function Get-AppCenterAppBuild {
+	[CmdletBinding()]
 	param(
 		[Parameter(Mandatory, ValueFromPipelineByPropertyName,Position=0)]
 		[Alias("id")]
