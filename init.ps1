@@ -3,7 +3,7 @@
 [CmdletBinding()]
 param(
 	[Parameter(Mandatory)]
-	[System.String]$token,
+	[System.String]$Token,
 	
 	[Parameter(Mandatory)]
 	[System.String]$AppName,
