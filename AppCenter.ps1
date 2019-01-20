@@ -6,7 +6,7 @@ Function Invoke-WebAppCenterAPI {
 		[System.Object]$Body,
 		[System.String]$ContentType = "application/json",		
 		[System.String]$Method = "Get",				
-		[System.String]$ApiToken = $token
+		[System.String]$ApiToken = $Token
 	)
 	
 	$RestParams = @{
