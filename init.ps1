@@ -9,7 +9,9 @@ param(
 	[System.String]$AppName,
 	
 	# Parallel tasks
-	[System.Byte]$Limit = 2
+	[System.Byte]$Limit = 2,
+	
+	[Switch]$SaveLog
 )
 
 # Import helper functions
