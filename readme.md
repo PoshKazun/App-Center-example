@@ -8,6 +8,7 @@
 ### Files:
 	init.ps1 - The script demonstrates how to start build all app branches
 	AppCenter.ps1 - Helper functions to call APIs App Center
+	[SaveLog] - Save all log files in the current directory.Output format - {Id}_{Branch}_{Result}.zip
 	
 ### Helper functions:
 	Invoke-WebAppCenterAPI          - Wrapper for the Invoke-RestMethod cmdlet
