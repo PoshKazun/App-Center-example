@@ -20,7 +20,7 @@ param(
 
 # Validate full access token
 try {
-	Get-AppCenterToken 
+	$null = Get-AppCenterToken 
 } catch {
 	throw "$_"
 	
@@ -91,4 +91,20 @@ if ($total) {
 		@{n = "Build status"; e = {$_.result}},
 		@{n = "Duration"; e = {([System.Datetime]$_.finishTime - [System.Datetime]$_.startTime).ToString().Split(".")[0]}},
 		@{n = "Link to build logs"; e = { (Get-AppCenterAppBuildLogFile -Build $_.id -OwnerName $Owner.Name -AppName $AppName).Uri }}
+	
+	if($SaveLog) {
+		Write-Host "[6] Saving log files" -ForegroundColor Yellow
+		
+		foreach($build in $total) {
+			$Result = $build.result
+			$Id = $build.id
+			
+			$Branch = [System.Uri]::EscapeDataString($Build.sourceBranch)
+			$LogName = "{0}_{1}_{2}.zip" -f $Id, $Branch, $Result 
+			Write-Host "`t$LogName" -ForegroundColor Green
+				
+			$Log = Get-AppCenterAppBuildLogFile -BuildId $Id -OwnerName $Owner.Name -AppName $AppName
+			Invoke-WebRequest -Uri $Log.uri -OutFile $LogName			
+		}
+	}
 }
