@@ -96,8 +96,9 @@ if ($total) {
 		Write-Host "[6] Saving log files" -ForegroundColor Yellow
 		
 		foreach($build in $total) {
-			$Result = $build.result
 			$Id = $build.id
+			$build = Get-AppCenterAppBuild -BuildId $Id -OwnerName $Owner.Name -AppName $AppName
+			$Result = $build.result
 			
 			$Branch = [System.Uri]::EscapeDataString($Build.sourceBranch)
 			$LogName = "{0}_{1}_{2}.zip" -f $Id, $Branch, $Result 
