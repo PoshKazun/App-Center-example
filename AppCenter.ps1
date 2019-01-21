@@ -293,7 +293,7 @@ Function Get-AppCenterAppLastBuildStatus {
 
 	Get-AppCenterApp | Where-Object Name -eq $AppName | Foreach-Object -Process {
 		$app = $_
-		$LastBuildStatus = Get-AppCenterAppBranch -OwnerName $app.owner.Name -AppName $app.Name | Where-Object configured
+		$LastBuildStatus = Get-AppCenterAppBranch -OwnerName $app.owner.Name -AppName $app.Name
 		
 		foreach ($status in $LastBuildStatus) {
 			$duration = $null
