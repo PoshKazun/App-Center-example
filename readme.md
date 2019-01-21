@@ -27,7 +27,7 @@
 ### Init parameters:
 	[Token]   - API token with full access
 	[AppName] - Application name (Get-AppCenterApp)
-	[Limit    - max parallel tasks (default = 2)]
+	[Limit    - Maximum parallel tasks (default = 2) per Application]
 	[SaveLog  - Save all log files in the current directory.Output format - {Id}_{Branch}_{Result}.zip]
 	
 ### Examples:
