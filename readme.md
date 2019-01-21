@@ -28,6 +28,7 @@
 	[Token]   - API token with full access
 	[AppName] - Application name (Get-AppCenterApp)
 	[Limit    - max parallel tasks (default = 2)]
+	[SaveLog - Save all log files in the current directory.Output format - {Id}_{Branch}_{Result}.zip]
 	
 ### Examples:
 	# Example 1
@@ -35,6 +36,9 @@
 	
 	# Example 2
 	C:\Scripts\init.ps1 -token 0a36a3b9f2c0570adb76 -AppName Android -Limit 1
+	
+	# Example 3
+	C:\Scripts\init.ps1 -token 0a36a3b9f2c0570adb76 -AppName Android -SaveLog
 	
 ### Sample output:
 	PS > C:\Scripts\init.ps1 -token 0a36a3b9f2c0570adb76a -AppName Android
@@ -63,7 +67,4 @@
 	feature     succeeded    00:01:28   	  https://build.appcenter.ms/v0.1/public/apps/baef20a7-56fa-4544-bffa-a67241...
 	master      succeeded    00:01:34	  https://build.appcenter.ms/v0.1/public/apps/baef20a7-56fa-4544-bffa-a67241...
 	t-sajia/... succeeded    00:01:22         https://build.appcenter.ms/v0.1/public/apps/baef20a7-56fa-4544-bffa-a67241..
-
-	
-
 	
