@@ -24,16 +24,30 @@ param(
 try {
 	$null = Get-AppCenterToken 
 } catch {
-	throw "$_"
-	
+	throw "$_"	
 	break
 }
 
 # Start building the app with limitation to parallel runnings
 Write-Host "[1] Application Name $AppName" -ForegroundColor Yellow
 
-# User App Center
-$Owner = Get-AppCenterUser
+# App
+$Application = Get-AppCenterApp | Where-Object Name -eq $AppName 
+
+if (-Not $Application) {
+	$apps = (Get-AppCenterApp).Name -join "`r`n`t"
+	throw "Application $AppName not found. Available: `r`n`t$apps"
+	break
+}
+
+# Application owner
+$Owner = $Application | Foreach-Object Owner
+
+if (-Not $Owner) {
+	throw "Owner not found for the $AppName application"
+	break
+}
+
 # List of Branches
 [System.Object[]]$Branches = Get-AppCenterAppBranch -OwnerName $Owner.Name -AppName $AppName
 
