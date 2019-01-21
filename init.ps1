@@ -91,7 +91,7 @@ Write-Host "[4] Wait until all tasks have finished" -ForegroundColor Yellow
 Write-Host "`t..." -ForegroundColor Green
 if ($total) {
 	while(1) {
-		$IsTask = $total | Get-AppCenterAppBuild -OwnerName $Owner.Name -AppName $AppName | Where-Object {$_.status -ne "completed"}
+		$IsTask = $total | Get-AppCenterAppBuild -OwnerName $Owner.Name -AppName $AppName | Where-Object Status -ne "completed"
 
 		if (-Not $IsTask) {
 			break
