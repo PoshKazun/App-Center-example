@@ -12,9 +12,6 @@ param(
 	[System.Byte]$Limit = 2
 )
 
-# Clears the display in the host program.
-Clear-Host
-
 # Import helper functions
 . $PSScriptRoot\AppCenter.ps1
 
