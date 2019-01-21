@@ -28,7 +28,7 @@
 	[Token]   - API token with full access
 	[AppName] - Application name (Get-AppCenterApp)
 	[Limit    - max parallel tasks (default = 2)]
-	[SaveLog - Save all log files in the current directory.Output format - {Id}_{Branch}_{Result}.zip]
+	[SaveLog  - Save all log files in the current directory.Output format - {Id}_{Branch}_{Result}.zip]
 	
 ### Examples:
 	# Example 1
