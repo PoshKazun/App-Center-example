@@ -27,8 +27,10 @@
 ### Init parameters:
 	[Token]   - API token with full access
 	[AppName] - Application name (Get-AppCenterApp)
-	[Limit    - Maximum parallel tasks (default = 2) per Application]
+	[Limit    - Maximum parallel tasks (default = 2) per Application] !!!*
 	[SaveLog  - Save all log files in the current directory.Output format - {Id}_{Branch}_{Result}.zip]
+	
+	!!!* - A parallel task it is not the same as concurrent build. The parallel task means that an object exists in one of the status : inProgress(Building) or notStarted(Queued). In contrast to the parallel task,however, the concurrent build means that an object exists in the inProgress(Building) status.
 	
 ### Examples:
 	# Example 1
