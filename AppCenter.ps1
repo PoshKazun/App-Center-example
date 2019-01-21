@@ -154,8 +154,8 @@ Function Get-AppCenterAppBuild {
 	)
 	
 	Process {
-		foreach ($id in $BuildId) {
-			Invoke-WebAppCenterAPI -Uri "${Uri}/${OwnerName}/${AppName}/builds/${Id}"
+		foreach ($ids in $BuildId) {
+			Invoke-WebAppCenterAPI -Uri "${Uri}/${OwnerName}/${AppName}/builds/${Ids}"
 		}
 	}
 }
