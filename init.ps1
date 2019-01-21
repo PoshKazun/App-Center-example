@@ -21,6 +21,15 @@ Clear-Host
 # TLS12
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 
+# Validate full access token
+try {
+	Get-AppCenterToken 
+} catch {
+	throw "$_"
+	
+	break
+}
+
 # Start building the app with limitation to parallel runnings
 Write-Host "[1] Application Name $AppName" -ForegroundColor Yellow
 
