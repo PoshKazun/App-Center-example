@@ -41,7 +41,7 @@ if (-Not $Application) {
 }
 
 # Application owner
-$Owner = $Application | Foreach-Object Owner
+$Owner = $Application.Owner
 
 if (-Not $Owner) {
 	throw "Owner not found for the $AppName application"
